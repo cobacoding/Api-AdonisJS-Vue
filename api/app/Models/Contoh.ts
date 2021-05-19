@@ -11,6 +11,9 @@ export default class Contoh extends BaseModel {
   @column()
   public teks: string
 
+  @column()
+  public completed: boolean
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 

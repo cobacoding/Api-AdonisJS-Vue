@@ -8,6 +8,7 @@ export default class Contohs extends BaseSchema {
       table.increments('id')
       table.string('judul').notNullable()
       table.string('teks').notNullable()
+      table.boolean('completed').defaultTo(false)
       table.timestamps()
     })
   }

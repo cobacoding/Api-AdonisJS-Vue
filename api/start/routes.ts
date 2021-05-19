@@ -23,3 +23,11 @@ import Route from '@ioc:Adonis/Core/Route'
 Route.get('/', async () => {
   return { hello: 'world' }
 })
+
+Route.group(() => {
+  Route.get('/teks', 'ContohsController.index')
+  Route.get('/teks/:id', 'ContohsController.fetchTask')
+  Route.post('/teks/new', 'ContohsController.create')
+  Route.patch('/teks/update/:id', 'ContohsController.updateProgress')
+  Route.delete('/teks/delete/:id', 'ContohsController.deleteTeks')
+})
